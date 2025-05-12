@@ -1,0 +1,251 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #172B4D;
+    --secondary-color: #0052CC;
+    --success-color: #00875A;
+    --warning-color: #E2B203;
+    --danger-color: #DE350B;
+    --neutral-light: #F4F5F7;
+    --neutral-medium: #DFE1E6;
+    --neutral-dark: #505F79;
+    --bg-color: #F8F9FA;
+    --text-color: #253858;
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --animation-speed: 0.3s;
+}
+
+html, body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Header Styles */
+.app-header {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    border-bottom: 2px solid var(--neutral-medium);
+}
+
+.section-header {
+    color: var(--primary-color);
+    margin: 1.5rem 0;
+    padding-bottom: 0.5rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--neutral-medium);
+}
+
+.subsection-header {
+    color: var(--primary-color);
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+/* Sidebar Styles */
+.sidebar-header {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    position: relative;
+    bottom: 0;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: var(--neutral-dark);
+    text-align: center;
+}
+
+/* Result Box Styles */
+.price-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    transition: transform var(--animation-speed);
+}
+
+.price-box:hover {
+    transform: translateY(-2px);
+}
+
+.price-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.price-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--success-color);
+}
+
+.comparison-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: var(--shadow-light);
+}
+
+.comparison-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--neutral-dark);
+}
+
+.comparison-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.early-exercise-value {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--success-color);
+    margin-top: 0.5rem;
+}
+
+/* Greek Display Styles */
+.greek-box {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.75rem 0;
+    box-shadow: var(--shadow-light);
+    transition: all var(--animation-speed);
+}
+
+.greek-box:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+.greek-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.greek-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin: 0.3rem 0;
+}
+
+.greek-desc {
+    font-size: 0.8rem;
+    color: var(--neutral-dark);
+}
+
+/* Chart Styles */
+.chart-header, .visualization-header, .download-header {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+    font-weight: 500;
+}
+
+/* About Section Styles */
+.about-section, .example-usage, .disclaimer {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow-light);
+}
+
+.about-section h3, .example-usage h3, .disclaimer h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.about-section h4 {
+    color: var(--secondary-color);
+    margin: 1rem 0 0.5rem;
+    font-weight: 500;
+}
+
+.formula {
+    font-family: 'Courier New', monospace;
+    background-color: var(--neutral-light);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    overflow-x: auto;
+}
+
+/* Input Form Styles */
+.stSelectbox label, .stNumberInput label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stButton button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: background-color var(--animation-speed);
+}
+
+.stButton button:hover {
+    background-color: #0747A6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .price-value {
+        font-size: 1.7rem;
+    }
+    
+    .greek-box {
+        padding: 0.75rem;
+    }
+    
+    .greek-value {
+        font-size: 1.1rem;
+    }
+}
+
+/* Custom Streamlit Elements */
+div.stSlider > div {
+    padding-top: 0.5rem;
+}
+
+.stExpander > div {
+    border: 1px solid var(--neutral-medium);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.stExpander > div > div > div {
+    padding: 1rem;
+}
+
+/* Tooltip Styling */
+.stTooltip {
+    font-size: 0.9rem;
+    max-width: 300px;
+}
